@@ -8,8 +8,11 @@ DISM /Online /Cleanup-image /Restorehealth
 :: Section 2: Libera espaço ao limpar componentes atualizados. Tempo limite de 1h
 DISM /online /Cleanup-Image /StartComponentCleanup
 :: Section 3: Cria ponto de restauração automático
-ECHO Tentando criar ponto de restauração automatico para voce.
+ECHO Tentando criar ponto de restauracao automatico para voce.
 wmic /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "Restore Point", 100, 7
+:: Section 4: Atualiza programas automáticamente
+ECHO Tentando atualizar seus programas...
+winget upgrade -h --all
 ECHO ==================================================================================
 ECHO Processo finalizado, as mensagens acima informa o sucesso ou nao no procedimento.
 ECHO ==================================================================================
