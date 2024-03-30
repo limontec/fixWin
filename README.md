@@ -1,2 +1,2 @@
 # fixWin
-Simples código para corrigir arquivos do sistema Windows
+Simples código para manter o Windows funcional sem tela azul
